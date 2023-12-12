@@ -1,0 +1,13 @@
+<template>
+	<div>What is the Company Name?</div>
+	<div>
+		<slot name="company name"></slot>
+	</div>
+	<div>In Which year company was established?</div>
+	<div>
+		<slot name="year"></slot>
+	</div>
+	<footer class="slds-card__footer slds-hide">
+		<slot name="footer" onslotchange={handleFooterChange}></slot>
+	</footer>
+</template>

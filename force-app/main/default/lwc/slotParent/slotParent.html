@@ -1,0 +1,18 @@
+<template>
+	<lightning-card title="Slot Parent Component">
+		<div class="slds-var-m-around_medium">
+			<c-slot-child>
+				<p class="slds-text-color_success" slot="company name">Gangineni Groups</p>
+				<p class="slds-text-color_error" slot="year">2031</p>
+				<p slot="footer">I am a footer</p>
+			</c-slot-child>
+		</div>
+		<div class="slds-var-m-around_medium">
+			<c-slot-child>
+				<p class="slds-text-color_success" slot="company name">Gangineni Groups</p>
+				<p class="slds-text-color_error" slot="year">2031</p>
+				<!-- <p slot="footer">I am a footer</p> -->
+			</c-slot-child>
+		</div>
+	</lightning-card>
+</template>
