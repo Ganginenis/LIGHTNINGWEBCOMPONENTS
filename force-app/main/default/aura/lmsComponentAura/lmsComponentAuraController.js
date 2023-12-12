@@ -21,6 +21,6 @@
                 value: msg
             }
         }
-        component.find("SampleMessageChannel").publish(message)
+        component.find("SampleMessageChannel").publish(message);
     }
 })
