@@ -1,26 +1,28 @@
 import { LightningElement, wire } from 'lwc';
-import SampleMC from "@salesforce/messageChannel/SampleMessageChannel__c"
-import { APPLICATION_SCOPE, publish, MessageContext } from 'lightning/messageService';
+import sampleMC from '@salesforce/messageChannel/SampleMessageChannel__c'
+import { APPLICATION_SCOPE, MessageContext, publish } from 'lightning/messageService';
 export default class LmsComponentA extends LightningElement 
 {
-	inputVal
+	inputValue
+
 	@wire(MessageContext)
 	context
 
-	textHandler(event)
+	inputHandler(event)
 	{
-		this.inputVal = event.target.value
+		this.inputValue = event.target.value
 	}
 
-	publishHandler()
+	publishMessage()
 	{
-		const message = {
-			lmsData:{
-				value:this.inputVal
+		const message=
+		{
+			lmsData : 
+			{
+				value: this.inputValue 
 			}
 		}
-		// Publish Context - publish(MessageContext, messageChannel, message)
-		publish(this.context, SampleMC, message)
+
+		publish(this.context, sampleMC, message)
 	}
-	
 }

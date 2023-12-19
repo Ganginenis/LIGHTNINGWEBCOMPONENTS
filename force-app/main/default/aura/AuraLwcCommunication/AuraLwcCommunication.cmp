@@ -1,7 +1,0 @@
-<aura:component implements="flexipage:availableForAllPageTypes">
-	<lightning:card title="AURA LWC Communication">
-		<div class="slds-var-p-around_medium">
-			<c:lwcAuraCommunication></c:lwcAuraCommunication>
-		</div>
-	</lightning:card>
-</aura:component>

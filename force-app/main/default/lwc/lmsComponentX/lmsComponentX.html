@@ -1,14 +1,10 @@
 <template>
-	<lightning-card title="LMS Component X (Subscribe Model)">
+	<lightning-card title="LMS Component X">
 		<div class="slds-var-m-around_medium">
-			<lightning-button class="slds-var-m-around_small" variant="Brand" label="Subscribe"
-				onclick={subscribeMessage}></lightning-button>
-			<lightning-button class="slds-var-m-around_small" variant="Brand" label="Unsubscribe"
-				onclick={unsubscribeMessage}></lightning-button>
+			<lightning-button label="unsubscribe" variant="Destructive" onclick={unsubscribeMessage}></lightning-button>
 		</div>
-
 		<div class="slds-var-m-around_medium">
-			Message Received: <strong>{receivedMsg}</strong>
+			Received Message: <strong>{receivedMessage}</strong>
 		</div>
 	</lightning-card>
 </template>
