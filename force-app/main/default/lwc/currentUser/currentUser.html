@@ -1,0 +1,18 @@
+<template>
+	<lightning-card title="Current User">
+		<table class="slds-table slds-table_cell-buffer slds-table_bordered">
+			<thead>
+				<tr class="slds-line-height_reset">
+					<th scope="col"> User Id: </th>
+					<th scope="col"> Is user guest? </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="slds-hint-parent">
+					<th scope="row"> {userID} </th>
+					<th scope="row"> {isCurrentUserGuest} </th>
+				</tr>
+			</tbody>
+		</table>
+	</lightning-card>
+</template>
