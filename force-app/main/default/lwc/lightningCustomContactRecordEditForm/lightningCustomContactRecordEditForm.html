@@ -1,0 +1,15 @@
+<template>
+	<lightning-card title="Lightning Custom Contact Record Edit Form">
+		<div class="slds-var-m-around_medium">
+			<lightning-record-edit-form object-api-name="objectName" onsubmit={submitHandler}
+				onsuccess={successHandler}>
+
+				<lightning-input label="First Name" value={inputValue} onkeyup={inputHandler}></lightning-input>
+
+				<lightning-button class="slds-var-p-top_x-small" label="Create Contact"
+					type="submit"></lightning-button>
+
+			</lightning-record-edit-form>
+		</div>
+	</lightning-card>
+</template>

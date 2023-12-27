@@ -1,0 +1,36 @@
+<template>
+	<lightning-card title="Lightning Record Form">
+		<div class="slds-var-m-around_medium">
+			<lightning-record-form object-api-name={objectName} fields={fieldName}
+				onsuccess={successHandler}></lightning-record-form>
+		</div>
+	</lightning-card>
+	<div class="slds-var-p-bottom_small"></div>
+	<lightning-card title="Lightning Record Form in View Mode">
+		<div class="slds-var-m-around_medium">
+			<lightning-record-form record-id="0011m00000p3b9FAAQ" object-api-name={objectName} fields={fieldName}
+				onsuccess={successHandler}></lightning-record-form>
+		</div>
+	</lightning-card>
+	<div class="slds-var-p-bottom_small"></div>
+	<lightning-card title="Lightning Record Form in Readonly Mode">
+		<div class="slds-var-m-around_medium">
+			<lightning-record-form record-id="0011m00000p3b9FAAQ" object-api-name={objectName} fields={fieldName}
+				onsuccess={successHandler} mode="readonly"></lightning-record-form>
+		</div>
+	</lightning-card>
+	<div class="slds-var-p-bottom_small"></div>
+	<lightning-card title="Lightning Record Form in Edit Mode">
+		<div class="slds-var-m-around_medium">
+			<lightning-record-form record-id="0011m00000p3b9FAAQ" object-api-name={objectName} fields={fieldName}
+				onsuccess={successHandler} mode="edit"></lightning-record-form>
+		</div>
+	</lightning-card>
+	<div class="slds-var-p-bottom_small"></div>
+	<lightning-card title="Lightning Record Form in Edit Mode with layout type">
+		<div class="slds-var-m-around_medium">
+			<lightning-record-form record-id={recordId} object-api-name={objectApiName} fields={fieldName}
+				onsuccess={successHandler} mode="edit" layout-type="Compact" columns="2"></lightning-record-form>
+		</div>
+	</lightning-card>
+</template>
