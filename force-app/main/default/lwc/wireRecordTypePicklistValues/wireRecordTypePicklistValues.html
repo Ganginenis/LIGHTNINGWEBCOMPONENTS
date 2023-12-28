@@ -1,0 +1,22 @@
+<template>
+	<lightning-card title="Wire record type picklist values">
+		<div class="slds-var-m-around_medium">
+			<template if:true={industryOptions}>
+				<lightning-combobox name="Industry" label="Industry" value={selectedIndustry}
+					placeholder="Select Industry" options={industryOptions}
+					onchange={changeHandler}></lightning-combobox>
+				<p class="slds-var-p-top_small">Selected Industry : <b>{selectedIndustry}</b></p>
+			</template>
+			<template if:true={ratingOptions}>
+				<lightning-combobox name="Rating" label="Rating" value={selectedRating} placeholder="Select Rating"
+					options={ratingOptions} onchange={changeHandler}></lightning-combobox>
+				<p class="slds-var-p-top_small">Selected Industry : <b>{selectedRating}</b></p>
+			</template>
+			<template if:true={typeOptions}>
+				<lightning-combobox name="Type" label="Type" value={selectedType} placeholder="Select Type"
+					options={typeOptions} onchange={changeHandler}></lightning-combobox>
+				<p class="slds-var-p-top_small">Selected Industry : <b>{selectedType}</b></p>
+			</template>
+		</div>
+	</lightning-card>
+</template>
