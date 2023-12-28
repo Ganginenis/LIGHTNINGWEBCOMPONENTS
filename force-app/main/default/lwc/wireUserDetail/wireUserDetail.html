@@ -1,0 +1,18 @@
+<template>
+	<lightning-card title="Wire adapter to fetch Current User details Using Function">
+		<div class="slds-var-m-around_medium">
+			<template if:true={userDetails}>
+				<div>User Name : {userDetails.Name.value}</div>
+				<div>User Email : {userDetails.Email.value}</div>
+			</template>
+		</div>
+	</lightning-card>
+	<lightning-card title="Wire adapter to fetch Current User details Using Property">
+		<div class="slds-var-m-around_medium">
+			<template if:true={userDetailProperty.data}>
+				<div>User Name : {userDetailProperty.data.fields.Name.value}</div>
+				<div>User Email : {userDetailProperty.data.fields.Email.value}</div>
+			</template>
+		</div>
+	</lightning-card>
+</template>
