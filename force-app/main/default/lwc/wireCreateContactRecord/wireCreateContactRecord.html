@@ -1,0 +1,22 @@
+<template>
+	<lightning-card title="Create Account in LWC">
+		<div class="slds-var-m-around_medium">
+			<form class="createForm">
+				<lightning-input label="Name" name="Name" onchange={changeHandler}
+					class="slds-var-p-bottom_x-small"></lightning-input>
+				<lightning-input label="Account Number" name="AccountNumber" onchange={changeHandler}
+					class="slds-var-p-bottom_x-small"></lightning-input>
+				<lightning-input label="Annual Revenue" name="AnnualRevenue" onchange={changeHandler}
+					class="slds-var-p-bottom_x-small"></lightning-input>
+				<lightning-input label="Phone" name="Phone" onchange={changeHandler}
+					class="slds-var-p-bottom_x-small"></lightning-input>
+				<!-- <lightning-input label="Rating" name="Rating" onchange={changeHandler}
+					class="slds-var-p-bottom_x-small"></lightning-input> -->
+				<lightning-combobox class="slds-var-p-bottom_x-small" name="Rating" label="Rating"
+					value={selectedRating} placeholder="Select Type" options={ratingOptions}
+					onchange={changeRatingHandler}></lightning-combobox>
+				<lightning-button label="Create Account" variant="brand" onclick={createAccount}></lightning-button>
+			</form>
+		</div>
+	</lightning-card>
+</template>

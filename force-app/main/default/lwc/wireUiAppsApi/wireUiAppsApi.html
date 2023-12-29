@@ -1,0 +1,13 @@
+<template>
+	<lightning-card title="Wire UI navItems API">
+		<div class="slds-var-m-around_medium">
+			<template if:true={result}>
+				<p>Developer Name: {result.developerName}</p>
+				<p>Object API Name : {result.objectApiName}</p>
+				<p>Page Reference: {result.pageReference.type}</p>
+				<p>Action Name: {result.pageReference.attributes.actionName}</p>
+			</template>
+
+		</div>
+	</lightning-card>
+</template>
