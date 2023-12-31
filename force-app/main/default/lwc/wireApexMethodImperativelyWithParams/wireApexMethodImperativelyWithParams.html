@@ -1,0 +1,18 @@
+<template>
+	<lightning-card title="Get Accounts by Searching the Name using LWC Wire Apex">
+		<div class="slds-var-m-around_medium">
+			<lightning-input label="Find Accounts" value={searchKey} type="search"
+				onchange={searchHandler}></lightning-input>
+		</div>
+
+		<template if:true={accounts}>
+			<template for:each={accounts} for:item="account">
+				<div class="slds-box slds-box_xx-small" key={account.Id}>
+					<p><strong>Name: </strong>{account.Name}</p>
+					<p><strong>Type: </strong>{account.Type}</p>
+					<p><strong>Industry: </strong>{account.Industry}</p>
+				</div>
+			</template>
+		</template>
+	</lightning-card>
+</template>

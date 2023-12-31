@@ -1,0 +1,16 @@
+<template>
+	<lightning-card title="Get Accounts by Type using Apex LWC Wire">
+		<div class="slds-var-m-around_medium">
+			<lightning-combobox name="type" label="Choose type" options={typeOptions} value={selectedType}
+				onchange={typeHandler}></lightning-combobox>
+			<template if:true={accountsType.data}>
+				<template for:each={accountsType.data} for:item="account">
+					<div class="slds-box slds-box_xx-small" key={account.Id}>
+						<p><strong>Name: </strong>{account.Name}</p>
+						<p><strong>Type: </strong>{account.Type}</p>
+					</div>
+				</template>
+			</template>
+		</div>
+	</lightning-card>
+</template>

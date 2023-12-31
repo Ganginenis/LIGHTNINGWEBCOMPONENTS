@@ -42,7 +42,7 @@ export default class WireCreateContactRecord extends LightningElement
 	{
 		if(data)
 		{
-			console.log(data)
+			// console.log(data)
 			this.ratingOptions = [...this.generatePicklist(data)]
 		}
 		if(error)

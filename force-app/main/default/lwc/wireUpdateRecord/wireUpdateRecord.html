@@ -1,0 +1,10 @@
+<!-- sldsValidatorIgnore -->
+<template>
+	<lightning-card title="Update Record in LWC">
+		<div class="slds-var-m-around_medium">
+			<lightning-datatable key-field="id" data={contacts} columns={columns} hide-checkbox-column
+				draft-values={draftValues} onsave={savehandler}>
+			</lightning-datatable>
+		</div>
+	</lightning-card>
+</template>
