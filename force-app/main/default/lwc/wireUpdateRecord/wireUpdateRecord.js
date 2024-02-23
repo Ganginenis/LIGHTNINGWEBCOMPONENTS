@@ -13,14 +13,12 @@ export default class WireUpdateRecord extends LightningElement
 		{
 			console.log(data)
 			this.contacts = data.records.records.map(item=>{
-				return 
-				{
+				return{
 					"Id": this.getValue(item, 'Id'),
 					"Name": this.getValue(item, 'Name'),
 					"Title": this.getValue(item, 'Title'),
 					"Phone": this.getValue(item, 'Phone'),
 					"Email": this.getValue(item, 'Email')
-
 				}
 			})
 		}

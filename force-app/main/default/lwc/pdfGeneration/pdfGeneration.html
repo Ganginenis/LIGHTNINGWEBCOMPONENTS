@@ -1,0 +1,37 @@
+<template>
+	<div class="container" style="background-color: white; padding: 16px;">
+		<div style="margin-bottom: 50px;">
+			<img src={imageUrl} alt="Logo" style="height: 40px; width: 150px" />
+			<div style="display: inline-block; float: right;">
+				<div>Invoice #: <strong>{invoiceData.invoiceNo}</strong></div>
+				<div>Created Date #: <strong>{invoiceData.invoiceCreated}</strong></div>
+				<div>Due Date #: <strong>{invoiceData.invoiceDue}</strong></div>
+			</div>
+		</div>
+		<div>
+			<div style="display: inline-block;">
+				<div><strong>{invoiceData.companyName}</strong></div>
+				<div><strong>{invoiceData.address1}</strong></div>
+				<div><strong>{invoiceData.address2}</strong></div>
+			</div>
+			<div style="display: inline-block; float: right; text-align:right;">
+				<div><strong>{clientData.client}</strong></div>
+				<div><strong>{clientData.userName}</strong></div>
+				<div><strong>{clientData.email}</strong></div>
+			</div>
+		</div>
+		<div style="background: #eee; margin: 16px 0px; padding: 8px;">
+			<div style="display: inline-block;"><strong>Services</strong></div>
+			<div style="display: inline-block; float: right;"><strong>Amount</strong></div>
+		</div>
+		<template iterator:service={services}>
+			<div key={service.value.name} style="padding: 8px;">
+				<div style="display: inline-block;">{service.value.name}</div>
+				<div style="display: inline-block; float: right;">{service.value.amount}</div>
+			</div>
+			<div if:true={service.last} key={service.value.name} style="padding: 8px;">
+				<div style="display: inline-block; float: right;"><strong>Total Amount: ${totalAmount}</strong></div>
+			</div>
+		</template>
+	</div>
+</template>

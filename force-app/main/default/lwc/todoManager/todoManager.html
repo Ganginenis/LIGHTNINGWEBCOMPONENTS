@@ -1,0 +1,40 @@
+<!-- sldsValidatorIgnore -->
+<template>
+	<lightning-layout multiple-rows class="slds-align_absolute-center slds-text-align_center container">
+		<lightning-layout-item size="12">
+			<div class="time">{time}</div>
+		</lightning-layout-item>
+		<lightning-layout-item size="12">
+			<div class="greeting">{greeting}</div>
+		</lightning-layout-item>
+
+		<lightning-layout-item size="12">
+			<div class="slds-text-heading_large slds-var-m-vertical_large">What's your main focus for today?</div>
+		</lightning-layout-item>
+
+		<lightning-layout-item size="12" large-device-size="6" medium-device-size="10" small-device-size="12">
+			<lightning-layout>
+				<lightning-layout-item size="11">
+					<lightning-input type="text" label="Whats on your mind?" variant="label-hidden"
+						title="Whats on your mind?" placeholder="Whats on your mind?"></lightning-input>
+				</lightning-layout-item>
+				<lightning-layout-item size="1">
+					<lightning-button-icon icon-name="utility:add" onclick={todoHandler}></lightning-button-icon>
+				</lightning-layout-item>
+			</lightning-layout>
+		</lightning-layout-item>
+
+		<lightning-layout-item size="12">
+			<div>UPCOMING</div>
+			<template for:each={todos} for:item="todo">
+				<div key={todo.todoId} class="item-class">
+					<span class="slds-text-heading_label">{todo.todoName}</span>
+					<lightning-button-icon icon-name="utility:check" title="Update todo"
+						class="slds-var-p-horizontal_medium" onclick={updateHandler}></lightning-button-icon>
+					<lightning-button-icon icon-name="utility:delete" title="Delete todo"
+						onclick={deleteHandler}></lightning-button-icon>
+				</div>
+			</template>
+		</lightning-layout-item>
+	</lightning-layout>
+</template>

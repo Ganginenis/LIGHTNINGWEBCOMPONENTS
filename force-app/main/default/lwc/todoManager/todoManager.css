@@ -1,0 +1,17 @@
+.container{
+	background-color: antiquewhite;
+	max-height: 480px;
+	padding: 16px;
+	border-radius: 5px;
+	/* display: inline; */
+}
+
+.time{
+	font-size: 4rem;
+	font-weight: 600;
+}
+
+.greeting{
+	font-size: 2rem;
+	font-weight: 400;
+}
